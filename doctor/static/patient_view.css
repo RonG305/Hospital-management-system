@@ -1,0 +1,52 @@
+body {
+   
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(178, 237, 237);
+}
+
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.patient_view  h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.patient_view .container {
+    width: 600px;
+    height: auto;
+    border-radius: 12px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 1.7rem;
+}
+
+
+.patient_view .container span {
+    font-weight: 500;
+    color: rgb(255, 132, 0);
+}
+
+.patient_view .back-button {
+    background-color: rgb(15, 104, 192);
+    width: 90px;
+    height: 35px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.patient_view .back-button a {
+    text-decoration: none;
+    color: #fff;
+}

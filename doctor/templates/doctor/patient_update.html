@@ -1,0 +1,16 @@
+{% extends 'doctor/add_patient.html'%}
+{% load static %}
+
+
+{% block content %}
+    <div class="container ">
+        <h3>Update Patient </h3>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ form }}
+        
+            <input type="submit" class="btn btn-primary my-3">
+            <a href="{% url 'patients_data' %}" class="btn btn-danger">Cancel</a>
+        </form>
+    </div>
+{% endblock content %}

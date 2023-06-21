@@ -1,0 +1,56 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'login.css'%}">
+</head>
+<body>
+    <section>
+        <div class="login">
+            <div class="container">
+                <div class="login-container">
+                    <div class="login-image">
+                        <img src="/static/media/online1.jpg" alt="">
+                    </div>
+                    <div class="login-form">
+                        <div class="header">
+                            <h2>LOGIN TO MEDICARE</h2>
+                         </div>
+                         <form method="POST" action="">
+                            {% csrf_token %}
+                             <div class="inputs">  
+                                 <div class="form">
+                                    <h3>User name</h3>
+                                    <div class="username">
+                                        <input type="text" name="username">
+                                    </div>
+                                </div>
+                                <div class="form">
+                                    <h3>Enter password</h3>
+                                    <div class="password">
+                                      <input type="password" name="password">
+                                    </div>
+                                </div>
+
+                                <div class="form">
+                                    <div class="login">
+                                      <input type="submit" name="Login" value="Login" >
+                                    </div>
+                                </div>
+                             </div>
+                         </form>
+                       
+                         <p>Don't have an Account <a href="{% url 'doctor_signup'%}"> signup</a></p>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

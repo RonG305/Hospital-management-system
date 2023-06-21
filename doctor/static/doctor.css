@@ -1,0 +1,367 @@
+:root {
+    --bg-primary: rgb(212, 211, 211);
+    --bg-secondary: rgb(50, 80, 201);
+    --bg-light: #fff;
+    --bg-danger: rgb(241, 103, 44);
+    --bg-btn: rgb(242, 119, 24);
+    --bg-card:rgb(133, 38, 133);
+    --sm-font: 12px;
+    --md-font: 14px;
+    --lg-font: 17px;
+
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-primary);
+    overflow-x: hidden;
+    
+    
+}
+
+
+span {
+    color: var(--bg-btn);
+}
+
+.wrapper {
+    position: relative;
+}
+
+.wrapper #sidebar {
+    width: 280px;
+    height: 100%;
+    background-color: var(--bg-light);
+    position: fixed;
+   
+}
+
+.wrapper #sidebar.hide {
+    display: none;
+    
+}
+
+#sidebar {
+    padding-left: 2rem;
+    padding-top: 2rem;
+    z-index: 1000;
+}
+
+#sidebar .brand {
+    height: 56px;
+    display: flex;
+    align-items: center; 
+    color: var(--bg-btn);
+}
+
+#sidebar .brand .fa-list {
+    font-size: 20px;
+    
+}
+
+
+
+#sidebar .brand h2 {
+    margin-left: 20px;
+}
+
+#sidebar .links li {
+    width: 100%;
+    height: 40px;
+    margin: 14px 0;
+    
+    border-radius: 40px 0 0 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+   
+}
+
+#sidebar .links li:hover {
+    background-color: rgb(179, 216, 249);
+    transition: 0.3s ease-out;
+    cursor: pointer;
+}
+
+#sidebar .links li a {
+    color: rgb(36, 35, 35);
+}
+
+#sidebar .links .fa-solid {
+    margin-right: 15px;
+}
+
+#sidebar .settings {
+    margin-top: 3rem;
+}
+
+#sidebar .settings li {
+    padding: 20px 0;
+}
+
+#sidebar .settings li a {
+    color: rgb(36, 35, 35);
+}
+
+#sidebar .settings li a:hover {
+    color: rgb(39, 229, 229);
+}
+
+#sidebar .settings .fa-solid {
+    margin-right: 15px;
+}
+
+/* MAIN CONTENT */
+.main-content {
+    margin-left: 280px;
+}
+
+.main-content.fullWidth {
+    margin-left: 0;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 0 2rem;
+    background-color: #fff;
+}
+
+#navbar .sidebar-toggler .fa-solid {
+    font-size: 25px;
+    background-color: var(--bg-btn);
+    width: 60px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 4px;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+}
+#navbar .form  {
+    width: 300px;
+    height: 35px;
+    border: 1px solid var(--bg-secondary);
+    border-radius: 25px;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+
+
+
+#navbar .form input {
+    border: none;
+    outline: none;
+}
+/* MAIN */
+.main-content .main {
+    margin: 2rem ;
+
+}
+
+.main-content .main .top-content {
+    display: flex;
+    gap: 2rem;
+}
+
+.main-content .main .top-content .doctor {
+    width: 60%;
+    height:200px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 0 20px;
+
+}
+
+.main .top-content .doctor .counts {
+    margin-top: 1.8rem;
+}
+.main .top-content .doctor .counts .cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.main .top-content .doctor .counts .cards .card {
+    width: 180px;
+    height: 180px;
+    background-color: #fff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 12px;
+
+}
+
+
+.main .top-content .doctor .card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.main .top-content .doctor .card .fa-solid {
+    font-size: 20px;
+
+}
+
+.main .top-content .doctor .card .fa-solid:nth-child(odd) {
+    color: var(--bg-secondary);
+    background-color: var(--bg-btn);
+    padding: 12px;
+    border-radius: 50%;
+}
+
+
+
+.main .top-content .doctor .image {
+    width: 200px;
+    
+}
+
+.main .top-content .doctor .image img {
+    width: 100%;
+    height: 180px;
+}
+
+
+/* TABLE */
+
+.lower-content {
+    margin-top: 20px;
+    display: flex;
+    gap: 2rem;
+}
+
+.lower-content .appointments {
+    background-color: #fff;
+    height: 400px;
+    border-radius: 15px;
+    width: 60%; 
+    padding: 20px;
+    overflow-y: scroll;
+}
+
+.lower-content .appointments .table {
+    width: 100%;
+    height: 100%;
+}
+
+.lower-content .appointments tbody tr {
+    box-sizing: border-box;
+}
+
+.lower-content .appointments tbody tr  #accepted {
+    background-color: rgb(133, 235, 119);
+    border-radius: 20px;
+    color: black;
+   
+}
+
+.lower-content .appointments tbody tr  #pending {
+    background-color: rgb(235, 199, 99);
+    border-radius: 20px;
+   color: #fff;
+}
+
+.lower-content .appointments tbody tr  #rejected {
+    background-color: rgb(239, 65, 21);
+    border-radius: 20px;
+    color: #fff;
+   
+}
+
+.lower-content .appointments .table .row img{
+   border-radius: 50%;
+}
+
+
+.lower-content .appointments  h3 {
+    color: var(--bg-danger);
+    padding: 20px 0;
+}
+
+
+.lower-content .appointments table, tr ,td {
+    border-collapse: collapse;
+
+}
+
+.lower-content .appointments table  tr {
+    border-bottom: 1px solid rgb(221, 212, 212);
+  
+}
+
+.lower-content .appointments table td {
+    padding: 10px;
+}
+
+.patient-attendance  {
+   background-color: #fff;
+   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+   border-radius: 20px;
+   padding: 20px;
+
+    
+}
+
+.patient-attendance h3 {
+    color: var(--bg-secondary);
+}
+
+ #myChart {
+    width: 400px;
+    height: 400px;
+}
+
+/* CONTENT */
+
+@media screen and (max-width: 450px) {
+    .main-content .main .top-content {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        height: auto;
+    }
+
+    .lower-content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .lower-content .appointments {
+        width: 100%; 
+
+    }
+}
+

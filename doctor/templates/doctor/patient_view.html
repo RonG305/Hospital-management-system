@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Playball&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'patient_view.css'%}">
+
+</head>
+<body>
+    
+    <div class="patient_view">
+       
+        <h2>Ronald Details</h2>
+
+        <div class="container">
+          
+           
+            <div class="image">
+                <img src="" alt="patient image">
+            </div>
+            <div class="patient-data">
+                <p><span>Name: </span>___________{{ patient.first_name }} {{ patient.last_name}}</p>
+                <p><span>Age: </span>___________{{ patient.age}}</p>
+                <p><span>Weight: </span>___________{{ patient.weight }}</p>
+                <p><span>Height: </span>___________{{ patient.height}}</p>
+                <p><span>Gender: </span>___________{{ patient.gender}}</p>
+                <p><span>Blood Group: </span>___________{{ patient.blood_group}}</p>
+                <p><span>Registration Date: </span>21/3/2023</p>
+            </div>
+            
+           
+
+            <div class="back-button">
+                <a href="{% url 'patients_data'%}">Back</a>
+            </div>
+        </div>
+       
+    </div>
+</body>
+</html>
