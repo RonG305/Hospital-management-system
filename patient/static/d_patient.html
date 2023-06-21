@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patients dashboard</title>
+    <!-- Font Awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+     <!-- Google Font Link for Icons -->
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+
+    <!-- Google Fonts -->
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Playball&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!--Chart js  -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+</head>
+<body>
+   
+    <div class="wrapper">
+
+         <!-- SIDE BAR -->
+
+        <div id="sidebar">
+            <a href="" class="brand">
+                <i class="fa-solid fa-list"></i>
+                <span><h2>Dashboard</h2></span>
+                
+            </a>
+            <ul class="links">
+                <li><a href="#"><i class="fa-solid fa-building"></i>departments</a></li>
+                <li><a href="#"><i class="fa-solid fa-user-doctor"></i>doctors</a></li>
+                <li><a href="#"><i class="fa-solid fa-chart-line"></i>analysis</a></li>
+                <li><a href="#"><i class="fa-solid fa-book-medical"></i>history</a></li>
+            </ul>
+
+            <ul class="settings">
+                <li><a href=""><i class="fa-solid fa-gear"></i>settings</a></li>
+                <li class="logout"><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>logout</a></li>
+            </div>
+        </div>
+
+          <!-- SIDE BAR -->
+
+           <!-- MAIN CONTENT -->
+        <div class="main-content">
+            <div id="navbar">
+                
+                <div class="form">
+                    <form action="#">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="search here...">
+                    </form>
+                </div>
+
+                <div class="sidebar-toggler">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+            <div class="main">
+                <div class="top-content">
+                    <div class="profile">
+                        <div class="image">
+                            <img src="./images/profile2.jpg" alt="">
+                            <h4>Mary wanjiru</h4>
+                            <p>mary@gmail.com</p>
+        
+                        </div>
+                       
+                        <div class="data">
+                            <div class="card">
+                                <h4>22</h4>
+                                <p>years</p>
+                            </div>
+    
+                            <div class="card">
+                                <h4>A</h4>
+                                <p>Blood Group</p>
+                            </div>
+    
+                            <div class="card">
+                                <h4>187 cm</h4>
+                                <p>height</p>
+                            </div>
+    
+                            <div class="card">
+                                <h4>85 kg</h4>
+                                <p>weight</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="health-condition">
+                        <div class="cards">
+                            <div class="card">
+                                <h3>General health</h3>
+                                <span>26%</span>
+                                <span class="progress" data-value="50%"></span>
+                                
+                            </div>
+                            <div class="card">
+                                <h3>Water balance</h3>
+                                <span>80%</span>
+                                <span class="progress" data-value="50%"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calender-wrapper">
+                        <div class="wrapper">
+                            <header>
+                              <p class="current-date"></p>
+                              <div class="icons">
+                                <span id="prev" class="material-symbols-rounded">chevron_left</span>
+                                <span id="next" class="material-symbols-rounded">chevron_right</span>
+                              </div>
+                            </header>
+                            <div class="calendar">
+                              <ul class="weeks">
+                                <li>Sun</li>
+                                <li>Mon</li>
+                                <li>Tue</li>
+                                <li>Wed</li>
+                                <li>Thu</li>
+                                <li>Fri</li>
+                                <li>Sat</li>
+                              </ul>
+                              <ul class="days"></ul>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+                <div class="lower-content">
+                    <div class="graph">
+                        <h3>You health condition</h3>  
+                        <canvas id="myChart" style="width:100%;max-width:100%"></canvas>     
+                </div>
+
+                <div class="prescriptions">
+                    <h3>Prescriptions</h3>
+                    <div class="prescription">
+                        <div class="card">
+                            <h5>Dentist</h5>
+                            <p><i class="fa-solid fa-tooth"></i>Brush your teeth regularly</p>
+                        </div>
+
+                        <div class="card">
+                            <h5>Cardiologist</h5>
+                            <p><i class="fa-solid fa-wave-square"></i>Brush your teeth regularly</p>
+                        </div>
+
+                        <div class="card">
+                            <h5>Dentist</h5>
+                            <p><i class="fa-solid fa-tooth"></i>Brush your teeth regularly</p>
+                        </div>
+
+                      
+                    </div>
+                </div>
+                </div>
+                
+            </div>
+        </div>   
+    </div>
+  
+    <script>
+        const ctx = document.getElementById('myChart');
+
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'Decemer'],
+            datasets: [{
+              label: 'health level',
+              data:  [122, 60, 70, 60, 60, 120, 180, 120, 125, 105, 110, 170],
+              borderWidth: 0
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+           
+ 
+        </script>    
+
+<script src="script.js"></script>
+<script src="d_patient.js"></script>   
+</body>
+</html>
